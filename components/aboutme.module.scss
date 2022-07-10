@@ -38,7 +38,7 @@
         width: 50%;
         display: flex;
         opacity: 0;
-        transform: translatey(100px);
+        transform: translateY(100px);
         @media screen and (max-width: 700px) {
             width: 100%;
         }
@@ -58,6 +58,16 @@
                 }
             }
         }
+    }
+
+    .background {
+        position: absolute;
+        right: 10%;
+        top: 140%;
+        font-size: 80px;
+        z-index: -20;
+        opacity: 0.1;
+        transform: translateX(150%);
     }
 }
 

@@ -34,6 +34,15 @@ const Contact = () => {
               start: "top 40%",
             }
           })
+          gsap.to(q1("#background"), {
+            x: 0,
+            scrollTrigger: {
+                trigger: ref1.current,
+                start: "top 50%",
+                end: "bottom bottom",
+            }
+        })
+
           }, [q1, ref1])
 
     function submitHandler(e: FormEvent) {
@@ -63,6 +72,9 @@ const Contact = () => {
                 <input type="submit" value="Send Message"/>
             </div>
         </form>
+        <div className={classes.background} id="background">
+            <h1>Contact</h1>
+        </div>
     </div>
   )
 }

@@ -27,7 +27,15 @@ const Aboutme = () => {
                 start: "top 30%",
             }
         })
+        gsap.to(q("#background"), {
+            x: 0,
+            scrollTrigger: {
+                trigger: el.current,
+                start: "top 20%",
+                end: "bottom bottom",
 
+            }
+        })
     })
   return (
     <div className={classes.container} ref={el} id="aboutme">
@@ -46,6 +54,9 @@ const Aboutme = () => {
                     for user exeperience such as Next.js.
                 </p>
             </div>
+        </div>
+        <div className={classes.background} id="background">
+            <h1>About me</h1>
         </div>
     </div>
   )

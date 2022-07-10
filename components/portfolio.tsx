@@ -28,6 +28,16 @@ const Portfolio = () => {
               start: "top 40%",
             }
           })
+          gsap.to(q1("#background"), {
+            x: 0,
+            scrollTrigger: {
+                trigger: ref1.current,
+                start: "top 5%",
+                end: "bottom bottom",
+
+            }
+        })
+
           }, [q1, ref1])
   return (
     <div className={classes.container} ref={ref1} >
@@ -58,6 +68,9 @@ const Portfolio = () => {
                 description='This webpage is using library for three.js with react.'
             />
 
+        </div>
+        <div className={classes.background} id="background">
+            <h1>Portfolio</h1>
         </div>
     </div>
   )

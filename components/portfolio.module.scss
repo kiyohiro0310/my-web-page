@@ -21,4 +21,17 @@
         grid-template-areas: "div";
     }
 }
+.background {
+    position: absolute;
+    left: 30%;
+    top: 380%;
+    font-size: 80px;
+    transform: translateX(-200%);
+    z-index: -70;
+
+    h1 {
+        opacity: 0.1;
+    }
+}
+
 }

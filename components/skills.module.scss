@@ -31,4 +31,18 @@
             "div div";
             }
     }
+    .background {
+        position: absolute;
+        left: 20%;
+        top: 250%;
+        font-size: 80px;
+        transform: translateX(-200%);
+        z-index: 70;
+
+        h1 {
+            opacity: 0.1;
+
+        }
+    }
+
 }

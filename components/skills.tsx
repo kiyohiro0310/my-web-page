@@ -30,6 +30,16 @@ const Skills = () => {
         start: "top 40%",
       }
     })
+    gsap.to(q1("#background"), {
+      x: 0,
+      scrollTrigger: {
+          trigger: ref1.current,
+          start: "top 20%",
+          end: "bottom bottom",
+
+      }
+  })
+
   }, [q1, ref1])
   return (
     <div className={classes.container} ref={ref1}>
@@ -54,6 +64,9 @@ const Skills = () => {
             <SkillCard skillName="Docker" imagePath="/images/skills/docker.png"/>
             <SkillCard skillName="Three.js" imagePath="/images/skills/threejs.png"/>
             <SkillCard skillName="CircleCI" imagePath="/images/skills/circleci.png"/>
+        </div>
+        <div className={classes.background} id="background">
+            <h1>Skills</h1>
         </div>
     </div>
   )

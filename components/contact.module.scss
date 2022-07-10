@@ -46,11 +46,15 @@
             flex-direction: column;
         }
 
-
         .left, .right {
             width: 50%;
             display: flex;
             flex-direction: column;
+            .input_validation {
+                color: red;
+                display: none;
+            }
+
             label {
                 font-size: 20px;
                 font-weight: bold;
@@ -63,8 +67,12 @@
                 font-size: 18px;
                 font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
                 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
+                &:invalid + .input_validation {
+                    display: initial;
+                }
             }
+
+
         }
         .left {
             padding-right: 10px;
@@ -89,6 +97,7 @@
             font-size: 20px;
             margin-top: 10px;
         }
+
         textarea {
             height: 300px;
             font-size: 18px;

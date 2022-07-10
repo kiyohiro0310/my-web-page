@@ -67,7 +67,12 @@
         font-size: 80px;
         z-index: -20;
         opacity: 0.1;
-        transform: translateX(150%);
+        transform: translateX(-350%);
+        @media screen and (max-width: 900px) {
+            font-size: 35px;
+            top: 120%;
+        }
+
     }
 }
 

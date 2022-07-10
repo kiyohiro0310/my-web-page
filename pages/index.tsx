@@ -23,7 +23,9 @@ const Home: NextPage = () => {
         <meta name="description" content="This website is about Kiyohiro Kambayashi" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero show={show} onSet={setTrue}/>
+      <div>
+        <Hero show={show} onSet={setTrue}/>
+      </div>
       {show &&
           <div>
             <Aboutme />

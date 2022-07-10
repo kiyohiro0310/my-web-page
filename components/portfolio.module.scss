@@ -22,12 +22,17 @@
     }
 }
 .background {
-    position: absolute;
-    left: 30%;
-    top: 380%;
-    font-size: 80px;
-    transform: translateX(-200%);
+    position: relative;
+    top: -800px;
+    left: 180px;
+    font-size: 70px;
+    transform: translateX(-300%);
     z-index: -70;
+    @media screen and (max-width: 700px) {
+        font-size: 30px;
+        left: 13%;
+        top: -2150px;
+         }
 
     h1 {
         opacity: 0.1;

@@ -32,7 +32,7 @@ const Portfolio = () => {
             x: 0,
             scrollTrigger: {
                 trigger: ref1.current,
-                start: "top 5%",
+                start: "top 15%",
                 end: "bottom bottom",
 
             }

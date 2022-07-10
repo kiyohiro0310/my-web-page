@@ -1,0 +1,95 @@
+.container {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 700px) {
+        padding: 25px;
+        height: fit-content;
+        flex-direction: column;
+        height: 95vh;
+
+    }
+
+    .hero_content {
+        width: 60%;
+        margin: auto;
+        display: flex;
+        @media screen and (max-width: 700px) {
+            width: 100%
+        }
+
+        div {
+            width: 80%;
+            height: 70%;
+            margin: auto;
+            @media screen and (max-width: 700px) {
+                width: 100%
+            }
+
+            p {
+                margin: 0;
+                font-size: 20px;
+                opacity: 0;
+                transform: translateY(100px);
+                @media screen and (max-width: 700px) {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+            }
+            h1 {
+                margin: 0;
+                font-size: 60px;
+                @media screen and (max-width: 700px) {
+                    font-size: 40px;
+                }
+                opacity: 0;
+                transform: translateY(100px);
+            }
+        }
+    }
+
+    .hero_image {
+        width: 35%;
+        height: 50%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(100px);
+        @media screen and (max-width: 700px) {
+            width: 100%;
+            padding: 20px;
+        }
+
+        div {
+            width: 65%;
+            @media screen and (max-width: 700px) {
+                margin: 0 auto;
+            }
+
+            .image {
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+.click {
+    text-align: center;
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.invisible_obstacle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 100;
+    display: block;
+}

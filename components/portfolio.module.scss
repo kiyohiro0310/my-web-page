@@ -24,11 +24,11 @@
 .background {
     position: relative;
     top: -800px;
-    left: 180px;
+    left: 480px;
     font-size: 70px;
     transform: translateX(-300%);
     z-index: -70;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 1100px) {
         font-size: 30px;
         left: 13%;
         top: -2150px;

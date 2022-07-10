@@ -4,12 +4,18 @@ import { addToDatabase, connectToDatabase } from "../../lib/db";
 async function handler(req: NextApiRequest, res: NextApiResponse) {
     if(req.method === "POST") {
         const newMessage = req.body;
+        let client;
 
-        const client = await connectToDatabase();
-        const result = await addToDatabase(client, "ContactMessage", newMessage);
+        try {
+            client = await connectToDatabase();
+            const result = await addToDatabase(client, "ContactMessage", newMessage);
+            res.status(200).json(result);
+        }
+        catch(error) {
+            res.status(500).json({message: "Connection failed."});
+            return;
+        }
 
-        client.close();
-        res.status(200).json(result);
     }
 }
 

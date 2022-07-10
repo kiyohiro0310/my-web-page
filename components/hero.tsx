@@ -57,9 +57,12 @@ const Hero: NextPage<propsType> = (props) => {
     }
 
     document.getElementById("container")!.addEventListener("wheel", handleEvent);
+    document.getElementById("container")!.addEventListener("scroll", handleEvent);
 
     return () => {
       document.getElementById("container")!.removeEventListener("wheel", handleEvent);
+      document.getElementById("container")!.removeEventListener("scroll", handleEvent);
+
     }
   }, [props])
 

@@ -58,11 +58,13 @@ const Hero: NextPage<propsType> = (props) => {
 
     document.getElementById("container")!.addEventListener("wheel", handleEvent);
     document.getElementById("container")!.addEventListener("scroll", handleEvent);
+    document.getElementById("container")!.addEventListener("touchmove", handleEvent);
+
 
     return () => {
       document.getElementById("container")!.removeEventListener("wheel", handleEvent);
       document.getElementById("container")!.removeEventListener("scroll", handleEvent);
-
+      document.getElementById("container")!.addEventListener("touchmove", handleEvent);
     }
   }, [props])
 

@@ -3,6 +3,7 @@
     height: 95vh;
     display: flex;
     flex-direction: row;
+    touch-action: auto;
 
     @media screen and (max-width: 700px) {
         padding: 25px;
